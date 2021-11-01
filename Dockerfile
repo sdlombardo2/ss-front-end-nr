@@ -1,6 +1,10 @@
 FROM node:10-alpine
 ENV NODE_ENV "production"
 ENV PORT 8079
+ENV NEW_RELIC_LICENSE_KEY=NRAK-7JCF597RJ691YP5MZWST3HWRNY2
+ENV NEW_RELIC_ACCOUNT_ID=3326388
+ENV NEW_RELIC_APP_NAME="Sock Shop"
+ENV NEW_RELIC_DISTRIBUTED_TRACING_ENABLED=true
 EXPOSE 8079
 RUN addgroup mygroup && adduser -D -G mygroup myuser && mkdir -p /usr/src/app && chown -R myuser /usr/src/app
 
